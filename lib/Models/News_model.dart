@@ -35,7 +35,8 @@ class News {
         title: json["title"] ?? "No Repoter",
         description: json["description"] ?? "No description",
         url: json["url"] ?? "No url",
-        urlToImage: json["urlToImage"] ?? "No image",
+        urlToImage: json["urlToImage"] ??
+            "https://www.pixelstalk.net/wp-content/uploads/2016/07/Peacock-Feathers-Images.jpeg",
         publishedAt: DateTime.parse(json["publishedAt"]),
         content: json["content"] ?? "No content",
       );

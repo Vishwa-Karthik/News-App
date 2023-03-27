@@ -29,11 +29,20 @@ class Article extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //* image
-          Image.network(
-            imageUrl,
-            height: MediaQuery.of(context).size.height * 0.5,
-            width: MediaQuery.of(context).size.width * 0.7,
-            fit: BoxFit.cover,
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.white,
+                width: 2,
+              ),
+            ),
+            child: Image.network(
+              imageUrl,
+              height: MediaQuery.of(context).size.height * 0.4,
+              width: MediaQuery.of(context).size.width * 0.7,
+              fit: BoxFit.cover,
+            ),
           ),
 
           const SizedBox(height: 10.0),
@@ -41,7 +50,12 @@ class Article extends StatelessWidget {
           //* title
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(title),
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 17,
+              ),
+            ),
           ),
 
           const SizedBox(height: 15.0),
